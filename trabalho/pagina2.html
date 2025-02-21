@@ -1,0 +1,325 @@
+<html>
+  <head>
+    <!-- Definindo estilos CSS -->
+    <style>
+      /*Aplica uma borda rosa em todos os elementos e remove margens e preenchimentos*/
+      * {
+        margin: 0;
+        padding: 0;
+        border-radius: 10px;
+      }
+      /* Estilo para o cabeçalho: define um preenchimento no topo, altura, cor de fundo, cor do texto e alinhamento central do texto */
+      body {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      header {
+        margin: 10px;
+        padding-top: 15px;
+        height: 80px;
+        color: #000000;
+        text-align: center;
+        word-spacing: 150px;
+        font-size: 40px;
+      }
+      /* Estilo para o menu lateral: define a altura máxima e mínima, largura e flutuação à esquerda */
+      aside {
+        min-height: 50px;
+        width: 25%;
+        float: left;
+        line-height: 200px;
+        margin: 10px;
+        font-size: 40px;
+      }
+      /* Estilo para o conteúdo principal: define a altura mínima, largura e flutuação à esquerda */
+      main {
+        height: 600px;
+        width: 40%;
+        box-shadow: rgba(189, 100, 144, 0.486) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        margin-top: 10%;
+      }
+
+      #caixa_user {
+        height: 30px;
+        width: 350px;
+        border: 1px solid rgb(201, 201, 201);
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
+
+      #caixa_senha {
+        height: 30px;
+        width: 350px;
+        border: 1px solid rgb(201, 201, 201);
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
+
+      #botao_entrar {
+        height: 30px;
+        width: 350px;
+        border: none;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        background-color: pink;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: rgba(238, 191, 230, 0.685) 0px 6px 12px -2px,
+          rgba(255, 172, 223, 0.3) 0px 3px 7px -3px;
+        margin-right: 10px;
+      }
+
+      #botao_entrar:hover {
+        height: 30px;
+        width: 350px;
+        border: none;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        background-color: rgb(248, 214, 219);
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: rgba(238, 191, 230, 0.685) 0px 6px 12px -2px,
+          rgba(255, 172, 223, 0.3) 0px 3px 7px -3px;
+      }
+
+      #botao_cadastro {
+        height: 30px;
+        width: 350px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        background-color: #ffc0cb;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: rgba(238, 191, 230, 0.685) 0px 6px 12px -2px,
+          rgba(255, 172, 223, 0.3) 0px 3px 7px -3px;
+        margin-left: 10px;
+      }
+
+      #botao_cadastro:hover {
+        height: 30px;
+        width: 350px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        background-color: rgb(248, 214, 219);
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: rgba(238, 191, 230, 0.685) 0px 6px 12px -2px,
+          rgba(255, 172, 223, 0.3) 0px 3px 7px -3px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+      }
+
+      /* Estilo para o rodapé */
+      footer {
+        clear: both;
+        width: 50%;
+        color: rgb(255, 167, 211);
+        font-size: 50px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        margin-top: 40%;
+        border-radius: 15px;
+        margin-left: 400px;
+      }
+      #texto1 {
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        color: dodgerblue;
+        font-size: 50px;
+        letter-spacing: 6px;
+        margin-top: 20px;
+        margin-left: 90px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      #texto2 {
+        border: none;
+        text-decoration: none;
+        color: rgb(170, 123, 197);
+        font-size: 20px;
+        letter-spacing: 6px;
+        margin-top: 20px;
+        margin-left: 90px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      input {
+        padding: 10px;
+      }
+
+      #gatinho {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        padding-left: 210px;
+      }
+
+      button {
+        color: #ffffff;
+      }
+
+      #botoes {
+        display: flex;
+        width: 330px;
+        flex-direction: row;
+      }
+
+      #todo_conteudo {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: flex-start;
+        padding-left: 80px;
+        width: 60px;
+
+      }
+      #botao_foto {
+        height: 30px;
+        width: 200px;
+        border-radius: 20px;
+        position: absolute;
+        margin-left: 700px;
+        margin-bottom: 10px;
+        background-color: #ffc0cb;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 80px;
+        padding-top: 10px;
+        color: #ffffff;
+        box-shadow: rgba(238, 191, 230, 0.685) 0px 6px 12px -2px,
+          rgba(255, 172, 223, 0.3) 0px 3px 7px -3px;
+      }
+      #botao_foto:hover {
+        height: 30px;
+        width: 200px;
+        border-radius: 20px;
+        position: absolute;
+        margin-left: 700px;
+        margin-bottom: 10px;
+        background-color: rgb(248, 214, 219);
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 80px;
+        padding-top: 10px;
+        color: #ffffff;
+        box-shadow: rgba(238, 191, 230, 0.685) 0px 6px 12px -2px,
+          rgba(255, 172, 223, 0.3) 0px 3px 7px -3px;
+      }
+      #fotinha {
+        border-radius: 5px;
+        width: 300px;
+        height: 30px;
+        border: none;
+        position: absolute;
+        margin-top: -130px;
+        margin-left: 450px;
+        display: none;
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menu lateral com itens de menu -->
+    <!--<aside><ul>&emsp;1. Teste<br>
+               &emsp;2. Outro teste<br>
+               &emsp;3. Mais teste<br></ul>
+        </aside>-->
+
+    <!-- Conteúdo principal com vários itens de conteúdo -->
+    <main>
+      <div id="todo_conteudo">
+        <div id="gatinho.jpg">
+          <img src="gatinho.jpg" />
+        </div>
+        <form action="http://google.com.br">
+          <label id="texto_user" for="user_name"></label>
+          <input
+            id="caixa_user"
+            required
+            type="text"
+            id="user_name"
+            name="user_name"
+            maxlength="50"
+            placeholder="Nome"
+          />
+          <br />
+          <label id="texto_senha" for="user_passwd"></label>
+          <input
+            id="caixa_senha"
+            required
+            type="password"
+            id="user_passwd"
+            name="user_passwd"
+            maxlength="50"
+            placeholder="Login"
+          />
+          <br />
+
+          <label id="texto_senha" for="user_passwd"></label>
+          <input
+            id="caixa_senha"
+            required
+            type="password"
+            id="user_passwd"
+            name="user_passwd"
+            maxlength="10"
+            minlength="6"
+            placeholder="Senha"
+          />
+          <br />
+
+          <label id="texto_senha" for="user_passwd"></label>
+          <input
+            id="caixa_senha"
+            required
+            type="password"
+            id="user_passwd"
+            name="user_passwd"
+            maxlength="10"
+            minlength="5"
+            placeholder="Email"
+          />
+
+          <label for="fotinha" id="botao_foto">Envie uma foto &#187;</label>
+          <input type="file" accept=".png,.jpg,.jpeg" "fotinha" id="fotinha">
+          <br />
+
+          <div id="botoes">
+            <button id="botao_entrar" type="submit">Voltar</button>
+            <br />
+            <button
+              id="botao_cadastro"
+              type="submit"
+              action="http://127.0.0.1:5500/pagina2.html"
+            >
+              Salvar
+            </button>
+          </div>
+        </form>
+
+        <div id="texto1"></div>
+        <br />
+        <div id="texto2"></div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
